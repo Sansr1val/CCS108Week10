@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+	static boolean isFound = false;
 
 	public static void main(String[] args) {
-		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
 		List<Subject> listSubjects = new ArrayList<Subject>();
 		
 		while(true) {
@@ -36,16 +35,17 @@ public class Main {
 					}
 					break;
 				case 2:
-					boolean isFound = false;
 					System.out.print("Enter the ID of the subject you're looking for: ");
 					int id = Integer.parseInt(br.readLine());
 					int i;
+					
 					for(i = 0; i<listSubjects.size();i++) {
 						if(listSubjects.get(i).getSubjectId() == id) {
 							isFound =true;
 							break;
 						}
 					}
+					
 					if(isFound) {
 						System.out.println("Subject found!");
 						listSubjects.get(i).Display();
@@ -59,17 +59,29 @@ public class Main {
 				case 4:
 					System.out.println("Enter the Subjects ID: ");
 					id = Integer.parseInt(br.readLine());
-					for (int index = 0; index < listSubjects.size(); index++) {
+					int index;
+					
+					for ( index = 0; index < listSubjects.size(); index++) {
 						if (listSubjects.get(index).getSubjectId() == id) {
-
-							listSubjects.remove(index);
+							isFound = true;
+							break;
 						}
 					}
+					
+					if(isFound) {
+						System.out.println("Subject Removed: ");
+						listSubjects.get(index).Display();
+						listSubjects.remove(index);
+					}else {
+						System.out.println("Subject is not found!");
+					}
+					isFound = false;
 					break;
 				case 5:
 					System.out.println("Subject Details: \n");
-					for(int i = 0; i<listSubjects.size();i++) {
-						listSubjects.get(i).Display();
+					for(int j = 0; j<listSubjects.size();j++) {
+						listSubjects.get(j).Display();
+						System.out.println("");
 					}
 					break;
 				}
