@@ -36,6 +36,17 @@ public class Main {
 				}
 				break;
 			case 2:
+				System.out.print("Enter the ID of the subject you're looking for: ");
+				int id = Integer.parseInt(rd.readLine());
+				for(int i = 0; i<listSubjects.size();i++) {
+					if(listSubjects.get(i).getSubjectId() == id) {
+						System.out.println("Subject found!");
+						listSubjects.get(i).Display();
+						break;
+					}else {
+						System.out.println("Subject not found.");
+					}
+				}
 				break;
 			case 3:
 				break;
