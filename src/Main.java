@@ -23,7 +23,7 @@ public class Main {
 				System.out.println("[4] Remove a Subject");
 				System.out.println("[5] Display Subject");
 				
-				System.out.println("\nEnter your Command: ");
+				System.out.print("\nEnter your Command: ");
 				int command =  Integer.parseInt(br.readLine());
 				
 				switch(command) {
