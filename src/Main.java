@@ -12,7 +12,7 @@ public class Main {
 		
 		while(true) {
 			try {
-				System.out.println("[1] Add New Subject");
+				System.out.println("\n[1] Add New Subject");
 				System.out.println("[2] Search Subject");
 				System.out.println("[3] Modify the details of the Subject");
 				System.out.println("[4] Remove a Subject");
