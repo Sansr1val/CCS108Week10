@@ -1,36 +1,35 @@
 
 public class Subject {
 	
-	private int subjectID;
+	static private int subjectId = 1;;
 	private String subjectName;
 	private int noOfUnits;
 	
-	//setters
-	public void setSubjectID(int subjectID) {
-		this.subjectID = subjectID;
+	public Subject(int subjectId, String subjectName) {
+		this.subjectId++;
+		this.subjectName = subjectName;
+		this.noOfUnits = noOfUnits;
 	}
+
 	
+
+	public static int getSubjectId() {
+		return subjectId;
+	}
+
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
-	
+
 	public void setNoOfUnits(int noOfUnits) {
 		this.noOfUnits = noOfUnits;
 	}
 	
-	public Subject() {}
-	
-	public Subject(int subjectID, String subjectName, int noOfUnits) {
-		this.subjectID = subjectID;
-		this.subjectName = subjectName;
-		this.noOfUnits = noOfUnits;
+	public String Display() {
+		String details = "Subject ID; "+ this.subjectId+ "\nSubject Name: "+this.subjectName+
+				"\bNumber of Units: "+this.noOfUnits;
+		return details;
 	}
 	
-	public void Display() {
-		System.out.println(this.subjectID);
-		System.out.println(this.subjectName);
-		System.out.println(this.noOfUnits);
-	}
-	
-	
+
 }
