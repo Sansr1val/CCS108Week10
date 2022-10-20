@@ -5,19 +5,6 @@ public class Subject {
 	private String subjectName;
 	private int noOfUnits;
 	
-	//getters
-	public int getSubjectID() {
-		return subjectID;
-	}
-	
-	public String getSubjectName() {
-		return subjectName;
-	}
-	
-	public int getNoOfUnits() {
-		return noOfUnits;
-	}
-	
 	//setters
 	public void setSubjectID(int subjectID) {
 		this.subjectID = subjectID;
