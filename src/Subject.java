@@ -1,25 +1,26 @@
 
 public class Subject {
+	
+	//class fields
 	static private int ID =0;
 	private int subjectId;;
 	private String subjectName;
 	private int noOfUnits;
 	
-	/*
-	 * Ths static int ID will be increased on each creation of a subject.
-	 * That id will be assigned on the created subject.
-	 */
+	//Parameterized constructor
 	public Subject( String subjectName, int noOfUnits) {
 		Subject.ID++;
 		this.subjectId = ID;
 		this.subjectName = subjectName;
 		this.noOfUnits = noOfUnits;
 	}
-
+	
+	//getter for ID
 	public int getSubjectId() {
 		return subjectId;
 	}
-
+	
+	//Constructors
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
