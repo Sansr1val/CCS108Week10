@@ -5,13 +5,11 @@ public class Subject {
 	private String subjectName;
 	private int noOfUnits;
 	
-	public Subject(int subjectId, String subjectName) {
+	public Subject( String subjectName, int noOfUnits) {
 		this.subjectId++;
 		this.subjectName = subjectName;
 		this.noOfUnits = noOfUnits;
 	}
-
-	
 
 	public static int getSubjectId() {
 		return subjectId;
