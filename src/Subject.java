@@ -1,17 +1,18 @@
 
 public class Subject {
-	
-	static private int subjectId = 1;;
+	static private int ID =0;
+	private int subjectId;;
 	private String subjectName;
 	private int noOfUnits;
 	
 	public Subject( String subjectName, int noOfUnits) {
-		this.subjectId++;
+		Subject.ID++;
+		this.subjectId = ID;
 		this.subjectName = subjectName;
 		this.noOfUnits = noOfUnits;
 	}
 
-	public static int getSubjectId() {
+	public int getSubjectId() {
 		return subjectId;
 	}
 
@@ -23,10 +24,10 @@ public class Subject {
 		this.noOfUnits = noOfUnits;
 	}
 	
-	public String Display() {
-		String details = "Subject ID; "+ this.subjectId+ "\nSubject Name: "+this.subjectName+
-				"\bNumber of Units: "+this.noOfUnits;
-		return details;
+	public void Display() {
+		System.out.println("Subject ID: "+this.subjectId);
+		System.out.println("Subject Name: "+this.subjectName);
+		System.out.println("Number of Units: "+this.noOfUnits);
 	}
 	
 
