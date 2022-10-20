@@ -9,7 +9,12 @@ public class Main {
 	public static void main(String[] args) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		List<Subject> listSubjects = new ArrayList<Subject>();
-		
+		/*
+		 * The main menu contain the operations.
+		 * The input is checked before using the operation.
+		 * When an error occurs, the user is returned to the main menu.
+		 * Each operation also checks the user input, it also goes back to the main menu if an error occurs.
+		 */
 		while(true) {
 			try {
 				System.out.println("\n[1] Add New Subject");
@@ -35,6 +40,10 @@ public class Main {
 					}
 					break;
 				case 2:
+					/*
+					 * If the subjectId is present in the list it is going to be displayed.
+					 * If not, a prompt will tell that it is not found.
+					 */
 					System.out.print("Enter the ID of the subject you're looking for: ");
 					int id = Integer.parseInt(br.readLine());
 					int i;
@@ -57,6 +66,10 @@ public class Main {
 				case 3:
 					break;
 				case 4:
+					/*
+					 * If the subjectId is present in the list it is going to be removed.
+					 * If not, a prompt will tell that it is not found and no subject will be removed.
+					 */
 					System.out.println("Enter the Subjects ID: ");
 					id = Integer.parseInt(br.readLine());
 					int index;
@@ -77,7 +90,7 @@ public class Main {
 					}
 					isFound = false;
 					break;
-				case 5:
+				case 5://all the details of each subjects in the list will be displayed
 					System.out.println("Subject Details: \n");
 					for(int j = 0; j<listSubjects.size();j++) {
 						listSubjects.get(j).Display();
