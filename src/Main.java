@@ -36,17 +36,23 @@ public class Main {
 					}
 					break;
 				case 2:
+					boolean isFound = false;
 					System.out.print("Enter the ID of the subject you're looking for: ");
 					int id = Integer.parseInt(br.readLine());
-					for(int i = 0; i<listSubjects.size();i++) {
+					int i;
+					for(i = 0; i<listSubjects.size();i++) {
 						if(listSubjects.get(i).getSubjectId() == id) {
-							System.out.println("Subject found!");
-							listSubjects.get(i).Display();
+							isFound =true;
 							break;
-						}else {
-							System.out.println("Subject not found.");
 						}
 					}
+					if(isFound) {
+						System.out.println("Subject found!");
+						listSubjects.get(i).Display();
+					}else {
+						System.out.println("Subject is not found!");
+					}
+					isFound = false;
 					break;
 				case 3:
 					break;
