@@ -64,18 +64,34 @@ public class Main {
 					isFound = false;
 					break;
 				case 3:
-					System.out.println("Enter the ID of the subject to modify : ");
-						int id = Integer.parseInt(br.readLine());
-						for(int i = 0; i<listSubjects.size();i++) {
-							System.out.println("Enter the new Subjects' name : ");
-							String name = br.readLine();
-							System.out.println("Enter the new Subjects' number of units : ");
-							int units = Integer.parseInt(br.readLine());
-							listSubjects.set(i, units, name ) ;
-
-								System.out.println("Subject " i + " " + " has been updated!");
-						
+					/*
+					 * Checks first if the subject exists in the list
+					 * If it exists the name and number of units of the subject can be changed
+					 * by the user.
+					 */
+					System.out.print("Enter the ID of the subject: ");
+					id = Integer.parseInt(br.readLine());
+					int x;
+					for(x = 0; x<listSubjects.size();x++) {
+						if(listSubjects.get(x).getSubjectId() == id) {
+							isFound =true;
+							break;
 						}
+					}
+					
+					if(isFound) {
+						System.out.println("Subject found!");
+						System.out.print("Enter the name of the subject: ");
+						String name = br.readLine(); 
+						System.out.print("Enter number of units: ");
+						int units = Integer.parseInt(br.readLine());
+						listSubjects.get(x).setSubjectName(name);
+						listSubjects.get(x).setNoOfUnits(units);
+						
+					}else {
+						System.out.println("Subject is not found!");
+					}
+					isFound = false;
 					break;
 				case 4:
 					/*
