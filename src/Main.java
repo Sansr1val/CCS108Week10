@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		List<Subject> listSubjects = new ArrayList<Subject>();
 		
@@ -27,7 +27,7 @@ public class Main {
 			case 1:
 				try {
 					System.out.print("Enter Subject Name: ");
-					String name = rd.readLine();
+					String name = br.readLine();
 					System.out.print("Enter Number of Units: ");
 					int units = Integer.parseInt(rd.readLine());
 					listSubjects.add(new Subject(name, units));
@@ -37,7 +37,7 @@ public class Main {
 				break;
 			case 2:
 				System.out.print("Enter the ID of the subject you're looking for: ");
-				int id = Integer.parseInt(rd.readLine());
+				int id = Integer.parseInt(br.readLine());
 				for(int i = 0; i<listSubjects.size();i++) {
 					if(listSubjects.get(i).getSubjectId() == id) {
 						System.out.println("Subject found!");
