@@ -40,6 +40,15 @@ public class Main {
 			case 3:
 				break;
 			case 4:
+				System.out.println("Enter the Subjects ID: ");
+
+					int id = Integer.parseInt(br.readLine(System.in));
+						for (int index = 0; index < listSubject.size(); index++) {
+							if (listSubject.get(index).getSubjectID() == id) {
+
+								listSubject.remove(index);
+			}
+		}
 				break;
 			case 5:
 				System.out.println("Subject Details: \n");
