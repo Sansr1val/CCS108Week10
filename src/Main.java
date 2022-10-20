@@ -64,6 +64,18 @@ public class Main {
 					isFound = false;
 					break;
 				case 3:
+					System.out.println("Enter the ID of the subject to modify : ");
+						int id = Integer.parseInt(br.readLine());
+						for(int i = 0; i<listSubjects.size();i++) {
+							System.out.println("Enter the new Subjects' name : ");
+							String name = br.readLine();
+							System.out.println("Enter the new Subjects' number of units : ");
+							int units = Integer.parseInt(br.readLine());
+							listSubjects.set(i, units, name ) ;
+
+								System.out.println("Subject " i + " " + " has been updated!");
+						
+						}
 					break;
 				case 4:
 					/*
